@@ -6,12 +6,12 @@
 	<body>
 		<a-scene altspace=fullspace:true>
 			
-			<a-entity geometry="primitive:ring;radiusOuter:0.3;radiusInner:0.2" material="color:olive" position="0 0 -3" cursor="maxDistance:30;fuse:true"></a-entity>
+			<a-entity geometry="primitive:ring;radiusOuter:0.3;radiusInner:0.2" material="color:olive" position="0 0 -3" cursor="maxDistance:30;fuse:true;timeOut:500"></a-entity>
 			
 			<a-entity geometry="primitive:box;depth:3;width:3;height:3" material="color:green" position="0 0 -4">
 				
 				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="2000" fill="backwards"></a-animation>
-				
+
 			</a-entity>
 			
 			<a-sky color="black" radius="500"></a-sky>
