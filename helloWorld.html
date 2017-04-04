@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.0.4/dist/altspace.min.js"></script>
+	</head>
+	<body>
+		<a-scene altspace=fullspace:true>
+			<a-assets>
+				<a-asset-item id="DP-obj" src="assets/deadpool.obj"></a-asset-item>
+				<a-asset-item id="DP-mtl" src="assets/deadpool.mtl"></a-asset-item>
+			</a-assets>
+
+			<a-entity obj-model="obj: #DP-obj; mtl: #DP-mtl"></a-entity>
+			
+			<a-sky src="images/sky.png"></a-sky>
+		</a-scene>
+	</body>
+</html>
