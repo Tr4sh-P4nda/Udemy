@@ -1,13 +1,24 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-		<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.0.2/dist/altspace.min.js"></script>
+		<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.2.0/dist/altspace.min.js"></script>
 	</head>
 	<body>
-		<a-scene altspace=fullspace:true>
-			<a-assets></a-assets>
-			<a-sphere radius="3" src="images/galaxy.png" side="back"></a-sphere>
-			<a-sky src="images/dome.jpg"></a-sky>
+		<a-scene 
+			altspace=fullspace:true>
+			<a-assets>
+				<a-asset-item id="walls" src="assets/models/Walls.dae"></a-asset-item>
+			</a-assets>
+			
+<!--Walls-->
+		    <a-collada-model 
+		    	src="#walls"
+		    	position='0 0 0' 
+			scale='1 1 1'
+  		        altspace-cursor-collider="enabled:false"
+			n-mesh-collider="type:environment;convex:true">
+		    </a-collada-model> 
 		</a-scene>
 	</body>
 </html>
